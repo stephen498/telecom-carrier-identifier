@@ -74,7 +74,7 @@ function checkNetwork() {
             img.style.height = '40px';
             img.style.paddingTop = '15px';
             const p = document.createElement('p')
-            p.innerText = `This is an ${ network[value]} NUMBER `;
+            p.innerText = `This is a ${ network[value]} NUMBER `;
 
             document.getElementById("form").insertAdjacentHTML('afterend', p.innerHTML);
             document.body.append(img);
