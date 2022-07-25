@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src='index1.js'></script>
+    <script src='index.js' type="module"></script>
 </head>
 
 <body>
-    <form id='form' action="oau.html">
+    <form id='form'>
         <label for="name"> Name
             </label>
         <input type="text" id="name" name="name">
@@ -18,11 +18,24 @@
             </label>
         <input type="text" id="sex" name="sex">
         <label for="phone"> Phone Number</label>
-        <input type="tel" id="phone" name="phone" autocomplete="tel-local-prefix" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" required>
-        <button onclick="checkNetwork()">submit</button>
-        <button onclick="window.location.reload()">cancel</button>
+        <input type="tel" id="phone" name="phone" autocomplete="off" pattern="^[0-9\-\+]{7,14}" list="air" required>
+        <datalist id="air">
+            <option id="option1">+234810</option>
+            <option id="option2">+234806</option>
+            <option id="option3">+234706</option>
+            <option id="option4">+234903</option>
+            <option id="option5">+234703</option>
+            <option id="option6">+234803</option>
+            <option id="option7">+234813</option>
+            <option id="option8">+234814</option>
+            <option id="option9">+234816</option>
+        </datalist>
+        <input type="submit" value='validate' id="val">
+        <input type="reset" value="reset">
     </form>
-
+    <div class="icon-JS" id="icon">
+        Pop up icon
+    </div>
 </body>
 
 </html>
